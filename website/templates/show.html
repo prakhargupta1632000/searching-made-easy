@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="text-align: center;"> 
+    {%for i in range(0,25) %}
+        {% if i<= res1['title'] | length %}
+        <div class="card text-center col-lg-2 mb-1" style="width: 25rem; height: 500px;">
+            <div id="image">
+            <img class="card-img-top img-fluid" src="{{res1['image'][i]}}" alt="Card image cap" style="height: 150px; width: 23rem;">
+            </div>
+            <div class="card-body">
+            <h5 class="card-title">{{res1['title'][i]}}</h5>
+            <p class="card-text">{{res1['tutor'][i]}}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+            <li class="list-group-item">Time:-{{res1['time'][i]}}</li>
+            <li class="list-group-item">Cost:-{{res1['cost'][i]}}</li>
+            <li class="list-group-item">Rating:-{{res1['rating'][i]}}</li>
+            <li class="list-group-item">Website:-Coursera</li>
+            </ul>
+            <div class="card-body">
+            <a class="btn btn-primary" href="{{res1['url'][i]}}" target="_blank" class="card-link">Course link</a>
+            </div>
+        </div>
+        {% endif %}
+        {% if i<= res2['title'] | length %}
+        <div class="card text-center col-lg-2 mb-1" style="width: 25rem; height: 500px;">
+            <div id="image">
+            <img class="card-img-top img-fluid" src="{{res2['image'][i]}}" alt="Card image cap" style="height: 150px; width: 23rem;">
+            </div>
+            <div class="card-body">
+            <h5 class="card-title">{{res2['title'][i]}}</h5>
+            <p class="card-text">{{res2['tutor'][i]}}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+            <li class="list-group-item">Time:-{{res2['time'][i]}}</li>
+            <li class="list-group-item">Cost:-{{res2['cost'][i]}}</li>
+            <li class="list-group-item">Website:-Edx</li>
+            </ul>
+            <div class="card-body">
+            <a class="btn btn-primary" href="{{res2['url'][i]}}" target="_blank" class="card-link">Course link</a>
+            </div>
+        </div>  
+        {% endif %}
+        {% if i<= res3['title'] | length %}  
+        <div class="card text-center col-lg-2 mb-1" style="width: 25rem; height: 500px;">
+            <div id="image">
+            <img class="card-img-top img-fluid" src="{{res3['image'][i]}}" alt="Card image cap" style="height: 150px; width: 23rem;">
+            </div>
+            <div class="card-body">
+            <h5 class="card-title">{{res3['title'][i]}}</h5>
+            <p class="card-text">{{res3['tutor'][i]}}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+            <li class="list-group-item">Time:-{{res3['time'][i]}}</li>
+            <li class="list-group-item">Cost:-{{res3['cost'][i]}}</li>
+            <li class="list-group-item">Website:-Future-Learn</li>
+            </ul>
+            <div class="card-body">
+            <a class="btn btn-primary" href="{{res3['url'][i]}}" target="_blank" class="card-link">Course link</a>
+            </div>
+        </div>    
+        {% endif %}
+        {% if i<= res4['title'] | length %}
+        <div class="card text-center col-lg-2 mb-1" style="width: 25rem; height: 500px;">
+            <div id="image">
+            <img class="card-img-top img-fluid" src="{{res4['photo'][i]}}" alt="Card image cap" style="height: 150px; width: 23rem;">
+            </div>
+            <div class="card-body">
+            <h5 class="card-title">{{res4['title'][i]}}</h5>
+            <p class="card-text">{{res4['channel-name'][i]}}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+            <li class="list-group-item">Time:-PlayList</li>
+            <li class="list-group-item">Cost:-FREE</li>
+            <li class="list-group-item">Website:-Youtube</li>
+            </ul>
+            <div class="card-body">
+            <a class="btn btn-primary" href="{{res4['link'][i]}}" target="_blank" class="card-link">Course link</a>
+            </div>
+        </div>   
+        {% endif %}     
+    {% endfor %}
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="./show.js"></script>
+</body>
+</html>

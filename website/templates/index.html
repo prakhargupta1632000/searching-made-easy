@@ -1,0 +1,12 @@
+{% extends "base.html" %} {% block title %}find{% endblock %} {% block content
+%}
+    <div style="display: flex; height: 50%; width: 100%; text-align: center; justify-content: center; margin-top: 50px;">
+        <form class="grid" action="/result" method="POST">
+          <center>
+          <label for="name" style="color: blue;">Enter Course Name:</label>
+          <input type="text" id="name" name="name">
+          <input class="file_submit" type="Submit" style="color: red;"></center>
+
+        </form>
+    </div>
+{% endblock %}
